@@ -26,6 +26,12 @@ body {
   align-items: center;
 }
 
+.App p {
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
 .array-display {
   display: flex;
   flex-direction: row;

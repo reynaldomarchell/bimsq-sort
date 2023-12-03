@@ -30,7 +30,7 @@ function Navbar(props) {
   return (
     <div className="navbar">
       <div className="navbar__title">
-        <h1>Sorting Algorithm Visualizer</h1>
+        <h1>BIMSQ Sorting Visualizer</h1>
       </div>
 
       <div className="navbar__toolbar">

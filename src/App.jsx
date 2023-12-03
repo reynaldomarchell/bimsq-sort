@@ -25,6 +25,8 @@ function App() {
   const [algorithm, setAlgorithm] = useState("");
   const [timeouts, setTimeouts] = useState([]);
   const [startGeneratingSteps, setStartGeneratingSteps] = useState(false);
+  const [sortingTime, setSortingTime] = useState(0); // added state for sorting time
+  const [isSortingFinished, setIsSortingFinished] = useState(false); // added state for sorting finish status
 
   // returns the sorting algorithm delay speed using formula
   // formula: speed = 1000/arraySize
@@ -110,6 +112,8 @@ function App() {
     clearKey();
     clearTimeouts();
     setStartGeneratingSteps(true); //invoke start generating steps
+    setIsSortingFinished(false); // reset sorting finish status
+    setSortingTime(0); // reset sorting time
   };
 
   const initialize_with_current_array = () => {
@@ -120,6 +124,8 @@ function App() {
     clearKey();
     clearTimeouts();
     setStartGeneratingSteps(true); //invoke start generating steps
+    setIsSortingFinished(false); // reset sorting finish status
+    setSortingTime(0); // reset sorting time
   };
 
   // start playing sort animation
@@ -134,6 +140,11 @@ function App() {
       let timeout = setTimeout(() => {
         setArray([...arraySteps[i]]);
         setCurrentStep(currStep++);
+        if (i === arraySteps.length - 1) {
+          setIsSortingFinished(true); // set sorting finish status to true
+          const time = delay * arraySteps.length;
+          setSortingTime(time); // calculate sorting time
+        }
       }, delay * (i + 1));
       timeoutsArray.push(timeout);
     }
@@ -186,6 +197,7 @@ function App() {
         startSorting={startSorting}
       />
       <div className="array-display">{bars}</div>
+      {isSortingFinished && <p>Sorting time: {sortingTime / 1000}s</p>}
     </div>
   );
 }
