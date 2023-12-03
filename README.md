@@ -1,8 +1,44 @@
-# React + Vite
+# Kelompok 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Member
 
-Currently, two official plugins are available:
+1. Reynaldo Marchell Bagas Adji - 2602138214
+2. Sessario Ammar Wibowo - 2602140433
+3. William Prasetyo - 2602132103
+4. Ihsaan Hardyanto - 2602114694
+5. Richard Yohanes - 2602139103
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Information
+
+BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection Sort, and Quick Sort. This app will display a visualization of the five types of sorting above.
+
+Stack used in this app
+
+- React
+- Vite
+
+## Installation
+
+1. Clone this repository
+
+```bash
+  git https://github.com/reynaldomarchell/bimsq-sort.git
+```
+
+2.  Go to the project directory
+
+```bash
+  cd bimsq-sort
+```
+
+3. Install the dependencies
+
+```bash
+  npm i
+```
+
+4. Start the app
+
+```bash
+  npm run dev
+```
