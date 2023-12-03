@@ -10,7 +10,7 @@ function RangeSlider({ onChange, value }) {
   return (
     <div className="range">
       <div className="title">
-        <h4>Set Array Size</h4>
+        <h4>Set Array Size ({value})</h4>
       </div>
 
       <div className="field">

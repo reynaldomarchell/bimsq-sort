@@ -26,10 +26,17 @@ body {
   align-items: center;
 }
 
-.App p {
+.container p {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 .array-display {
@@ -38,6 +45,8 @@ body {
   justify-content: space-evenly;
   max-width: 75vw;
   transform: rotate(180deg);
+  height: 75vh;
+  margin-right: 100px;
 }
 
 @media screen and (max-width: 1450px) {

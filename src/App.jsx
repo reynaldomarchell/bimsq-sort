@@ -196,8 +196,12 @@ function App() {
         setAlgorithm={setAlgorithm}
         startSorting={startSorting}
       />
-      <div className="array-display">{bars}</div>
-      {isSortingFinished && <p>Sorting time: {sortingTime / 1000}s</p>}
+      <div className="container">
+        <div className="array-display">{bars}</div>
+        {isSortingFinished && (
+          <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
+        )}
+      </div>
     </div>
   );
 }

@@ -10,13 +10,14 @@ function SelectAlgorithm({ onChange }) {
 
   return (
     <div>
+      <h4>Select Algorithm</h4>
       <select
         name="algorithms"
         id="algorithms"
         className="select-algorithms"
         onChange={onChange}
       >
-        <option value="">--select an algorithm--</option>
+        <option value="">--Select an algorithm--</option>
         <option value="Bubble Sort">Bubble Sort</option>
         <option value="Selection Sort">Selection Sort</option>
         <option value="Insertion Sort">Insertion Sort</option>
