@@ -9,10 +9,20 @@ const Bar = (props) => {
     borderRadius: `${props.width / 1}px`,
     transform: `rotate(${180}deg)`,
   };
+  const numberStyle = {
+    position: "absolute",
+    bottom: "5px",
+    left: "50%",
+    transform: "translateX(-50%)",
+  };
   return (
     <>
       <div className="bar" style={barStyle}>
-        {props.width >= 25 ? props.length : ""}
+        {props.width >= 25 && (
+          <div className="number" style={numberStyle}>
+            {props.length}
+          </div>
+        )}
       </div>
     </>
   );
