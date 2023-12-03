@@ -47,7 +47,7 @@ function Navbar(props) {
 
         <div className="navbar__toolbar-newarray">
           <button className="Algobutton" onClick={generateNewArrayHandler}>
-            GENERATE THE ARRAY
+            Generate Array
           </button>
         </div>
 
@@ -65,7 +65,7 @@ function Navbar(props) {
 
         <div className="navbar__toolbar-sort">
           <button className="Algobutton" onClick={sortArrayHandler}>
-            SORT!
+            Sort!
           </button>
         </div>
       </div>

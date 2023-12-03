@@ -40,7 +40,6 @@ function App() {
     const newDelay = getDelay(size);
     setArraySize(size);
     setDelay(newDelay);
-    console.log(typeof arraySize); // delete this later
   };
 
   // returns an array of n numbers where n =arraySize
@@ -60,7 +59,6 @@ function App() {
 
   // generates steps
   const generateSteps = () => {
-    console.log(`generating steps`);
     let arr = [...array];
     let steps = [array.slice()];
     let clrSteps = [...colorSteps];
@@ -72,9 +70,6 @@ function App() {
 
   // calls the appropriate algorithm to set the sorting steps
   const sort = (array, arraySteps, colorSteps) => {
-    // console.log(`sorting Algorithm: ${algorithm}`);
-    // console.log(`arraysteps: ${arraySteps}`);
-    // console.log(`colorSteps: ${colorSteps}`);
     switch (algorithm) {
       case "Merge Sort":
         MergeSort(array, arraySteps, colorSteps);
@@ -99,7 +94,6 @@ function App() {
   const clearTimeouts = () => {
     timeouts.forEach((timeout) => clearTimeout(timeout));
     setTimeouts([]);
-    console.log(`Timeouts cleared...`);
   };
 
   // Initializes the app by generating random array
