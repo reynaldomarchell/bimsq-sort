@@ -10,10 +10,11 @@
 
 .Algobutton:hover {
   cursor: pointer;
+  background-color: #72d2ff;
 }
 
 body {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(72, 72, 72);
   text-align: center;
   margin: 0px;
   padding: 0px;
