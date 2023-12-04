@@ -19,9 +19,9 @@ function SelectAlgorithm({ onChange }) {
       >
         <option value="">--Click here--</option>
         <option value="Bubble Sort">Bubble Sort</option>
-        <option value="Selection Sort">Selection Sort</option>
         <option value="Insertion Sort">Insertion Sort</option>
         <option value="Merge Sort">Merge Sort</option>
+        <option value="Selection Sort">Selection Sort</option>
         <option value="Quick Sort">Quick Sort</option>
       </select>
     </div>

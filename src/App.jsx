@@ -71,20 +71,20 @@ function App() {
   // calls the appropriate algorithm to set the sorting steps
   const sort = (array, arraySteps, colorSteps) => {
     switch (algorithm) {
-      case "Merge Sort":
-        MergeSort(array, arraySteps, colorSteps);
-        break;
-      case "Quick Sort":
-        QuickSort(array, arraySteps, colorSteps);
+      case "Bubble Sort":
+        BubbleSort(array, arraySteps, colorSteps);
         break;
       case "Insertion Sort":
         InsertionSort(array, arraySteps, colorSteps);
         break;
-      case "Bubble Sort":
-        BubbleSort(array, arraySteps, colorSteps);
+      case "Merge Sort":
+        MergeSort(array, arraySteps, colorSteps);
         break;
       case "Selection Sort":
         SelectionSort(array, arraySteps, colorSteps);
+        break;
+      case "Quick Sort":
+        QuickSort(array, arraySteps, colorSteps);
         break;
       default:
         console.error("Invalid algorithm selected!");
