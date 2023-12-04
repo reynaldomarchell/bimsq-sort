@@ -14,6 +14,7 @@ const Bar = (props) => {
     bottom: "5px",
     left: "50%",
     transform: "translateX(-50%)",
+    fontWeight: "bold",
   };
   return (
     <>
