@@ -1,14 +1,12 @@
-import React from "react";
 import "./selectalgorithm.css";
 
-function SelectAlgorithm({onChange}){
-  const [selectedAlgorithms, setSelectedAlgorithms] = React.useState([]);
-
+function SelectAlgorithm({ algorithm, setAlgorithm }) {
   const handleChange = (event) => {
     const { value, checked } = event.target;
+    console.log(algorithm);
     if (checked) {
-      if (selectedAlgorithms.length < 2) {
-        setSelectedAlgorithms((prevSelectedAlgorithms) => [
+      if (algorithm.length < 2) {
+        setAlgorithm((prevSelectedAlgorithms) => [
           ...prevSelectedAlgorithms,
           value,
         ]);
@@ -16,7 +14,7 @@ function SelectAlgorithm({onChange}){
         event.target.checked = false;
       }
     } else {
-      setSelectedAlgorithms((prevSelectedAlgorithms) =>
+      setAlgorithm((prevSelectedAlgorithms) =>
         prevSelectedAlgorithms.filter((algorithm) => algorithm !== value)
       );
     }

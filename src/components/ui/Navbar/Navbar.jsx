@@ -17,11 +17,6 @@ function Navbar(props) {
     props.handleArraySizeAndSpeedChange(event.target.value);
   };
 
-  // handle changing of algorithm
-  const handleSortingAlgorithmChange = (event) => {
-    props.setAlgorithm(event.target.value);
-  };
-
   // starts playing the sorting algorithm
   const sortArrayHandler = () => {
     props.startSorting();
@@ -56,7 +51,10 @@ function Navbar(props) {
         </div>
 
         <div className="navbar__toolbar-algorithms">
-          <SelectAlgorithm onChange={handleSortingAlgorithmChange} />
+          <SelectAlgorithm
+            algorithm={props.algorithm}
+            setAlgorithm={props.setAlgorithm}
+          />
         </div>
 
         <div>

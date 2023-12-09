@@ -19,7 +19,7 @@ function App() {
   const [currentStep, setCurrentStep] = useState(0);
   const [arraySize, setArraySize] = useState(15);
   const [delay, setDelay] = useState(50);
-  const [algorithm, setAlgorithm] = useState("");
+  const [algorithm, setAlgorithm] = useState([]);
   const [timeouts, setTimeouts] = useState([]);
   const [startGeneratingSteps, setStartGeneratingSteps] = useState(false);
   const [sortingTime, setSortingTime] = useState(0); // added state for sorting time
@@ -55,19 +55,19 @@ function App() {
   };
 
   // generates steps
-  const generateSteps = () => {
+  const generateSteps = (index) => {
     let arr = [...array];
     let steps = [array.slice()];
     let clrSteps = [...colorSteps];
-    sort(arr, steps, clrSteps);
+    sort(arr, steps, clrSteps, index);
     setArraySteps(steps);
     setColorSteps(clrSteps);
     setStartGeneratingSteps(false); // after generating steps, set it to false
   };
 
   // calls the appropriate algorithm to set the sorting steps
-  const sort = (array, arraySteps, colorSteps) => {
-    switch (algorithm) {
+  const sort = (array, arraySteps, colorSteps, index) => {
+    switch (algorithm[index]) {
       case "Bubble Sort":
         BubbleSort(array, arraySteps, colorSteps);
         break;
@@ -139,7 +139,7 @@ function App() {
       }, delay * (i + 1));
       timeoutsArray.push(timeout);
     }
-    console.log(`setting tiemeout`);
+    console.log(`setting timeout`);
     setTimeouts(timeoutsArray);
   };
 
@@ -169,7 +169,7 @@ function App() {
   // when the array is done initializing, generate steps
   useEffect(() => {
     if (startGeneratingSteps) {
-      generateSteps();
+      generateSteps(0);
     }
   }, [startGeneratingSteps]);
 
@@ -184,20 +184,26 @@ function App() {
         handleArraySizeAndSpeedChange={handleArraySizeAndSpeedChange}
         arraySize={arraySize}
         generateNewArray={initialize}
+        algorithm={algorithm}
         setAlgorithm={setAlgorithm}
         startSorting={startSorting}
       />
-      <div className="container">
-        {Array.from({ length: algorithm }, (_, index) => (
-          <div key={index} className="array-display">
-            {bars}
-          </div>
-        ))}
-        <div className="array-display">{bars}</div> 
-        {isSortingFinished && (
-          <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
-        )}
-      </div>
+      {algorithm[0] && (
+        <div className="container 1">
+          <div className="array-display">{bars}</div>
+          {isSortingFinished && (
+            <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
+          )}
+        </div>
+      )}
+      {algorithm[1] && (
+        <div className="container 2">
+          <div className="array-display">{bars}</div>
+          {isSortingFinished && (
+            <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
