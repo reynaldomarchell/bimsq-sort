@@ -16,6 +16,7 @@ const Bar = (props) => {
     transform: "translateX(-50%)",
     fontWeight: "bold",
   };
+  
   return (
     <>
       <div className="bar" style={barStyle}>

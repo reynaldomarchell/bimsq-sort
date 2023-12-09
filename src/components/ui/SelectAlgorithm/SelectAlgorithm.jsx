@@ -1,29 +1,81 @@
+import React from "react";
 import "./selectalgorithm.css";
 
-function SelectAlgorithm({ onChange }) {
-  // const [algorithm, setAlgorithm] = React.useState("")
+function SelectAlgorithm({onChange}){
+  const [selectedAlgorithms, setSelectedAlgorithms] = React.useState([]);
 
-  // const handleChange = event => {
-  //     let v = event.target.value
-  //     setAlgorithm(v)
-  // }
+  const handleChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      if (selectedAlgorithms.length < 2) {
+        setSelectedAlgorithms((prevSelectedAlgorithms) => [
+          ...prevSelectedAlgorithms,
+          value,
+        ]);
+      } else {
+        event.target.checked = false;
+      }
+    } else {
+      setSelectedAlgorithms((prevSelectedAlgorithms) =>
+        prevSelectedAlgorithms.filter((algorithm) => algorithm !== value)
+      );
+    }
+  };
 
   return (
-    <div>
-      <h4>Select Algorithm</h4>
-      <select
-        name="algorithms"
-        id="algorithms"
-        className="select-algorithms"
-        onChange={onChange}
-      >
-        <option value="">--Click here--</option>
-        <option value="Bubble Sort">Bubble Sort</option>
-        <option value="Insertion Sort">Insertion Sort</option>
-        <option value="Merge Sort">Merge Sort</option>
-        <option value="Selection Sort">Selection Sort</option>
-        <option value="Quick Sort">Quick Sort</option>
-      </select>
+    <div className="outer__container">
+      <div className="checkbox__container">
+        <h4>Select Algorithm</h4>
+        <label>
+          <input
+            type="checkbox"
+            name="algorithms"
+            value="Bubble Sort"
+            onChange={handleChange}
+          />
+          Bubble Sort
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            name="algorithms"
+            value="Insertion Sort"
+            onChange={handleChange}
+          />
+          Insertion Sort
+        </label>
+        <br />
+        <label>
+          <input
+            type="checkbox"
+            name="algorithms"
+            value="Merge Sort"
+            onChange={handleChange}
+          />
+          Merge Sort
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            name="algorithms"
+            value="Selection Sort"
+            onChange={handleChange}
+          />
+          Selection Sort
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            name="algorithms"
+            value="Quick Sort"
+            onChange={handleChange}
+          />
+          Quick Sort
+        </label>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-
-// UI
 import Navbar from "./components/ui/Navbar/Navbar";
 import Bar from "./components/ui/Bar/Bar";
-
 import "./App.css";
 
 // Algorithms
@@ -191,7 +188,12 @@ function App() {
         startSorting={startSorting}
       />
       <div className="container">
-        <div className="array-display">{bars}</div>
+        {Array.from({ length: algorithm }, (_, index) => (
+          <div key={index} className="array-display">
+            {bars}
+          </div>
+        ))}
+        <div className="array-display">{bars}</div> 
         {isSortingFinished && (
           <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
         )}

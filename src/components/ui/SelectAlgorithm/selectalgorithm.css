@@ -1,17 +1,11 @@
-.select-algorithms {
-  width: 15vw;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  outline: none;
-  border: unset;
-  border-bottom: 3px solid royalblue;
-  font-family: inherit;
+h4{
+  margin-bottom: 0;
 }
 
-select {
-  margin-bottom: 2rem;
+.outer__container{
+  margin-bottom: 1rem;
 }
+
 
 @media screen and (max-width: 1450px) {
   .select-algorithms {
