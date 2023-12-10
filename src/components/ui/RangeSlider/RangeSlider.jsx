@@ -1,19 +1,11 @@
-import "./rangeslider.css";
-
 function RangeSlider({ onChange, value }) {
-  // const [value, setValue] = React.useState(50)
-
-  // const handlechange = event => {
-  //     let v = event.target.value
-  //     setValue(v)
-  // }
   return (
-    <div className="range">
+    <div className="flex flex-col items-center content-center w-20 md:w-40">
       <div className="title">
-        <h4>Set Array Size ({value})</h4>
+        <h4 className="m-0 mb-2">Set Array Size ({value})</h4>
       </div>
 
-      <div className="field">
+      <div className="flex items-center bg-white rounded p-2 mb-5">
         <input
           type="range"
           min={5}
@@ -22,6 +14,7 @@ function RangeSlider({ onChange, value }) {
           onChange={onChange}
           title={value}
           value={value}
+          className="bg-white rounded h-1 outline-none border-none w-20 md:w-40"
         />
       </div>
     </div>
