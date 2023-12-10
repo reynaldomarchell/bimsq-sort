@@ -1,13 +1,15 @@
-import "./bar.css";
 import Colors from "../Colors/Colors";
 
-const Bar = (props) => {
+const Bar = ({ length, color, width }) => {
   const barStyle = {
-    height: `${props.length * 0.65}vh`,
-    backgroundColor: Colors[props.color],
-    width: `${props.width}px`,
-    borderRadius: `${props.width / 1}px`,
+    height: `${length * 0.65}vh`,
+    backgroundColor: Colors[color],
+    width: `${width * 100}px`,
+    borderRadius: `${width / 1}px`,
     transform: `rotate(${180}deg)`,
+    marginRight: `${2}px`,
+    marginTop: `${8}px`,
+    marginBottom: `${20}px`,
   };
   const numberStyle = {
     position: "absolute",
@@ -18,12 +20,8 @@ const Bar = (props) => {
   };
   return (
     <>
-      <div className="bar" style={barStyle}>
-        {props.width >= 25 && (
-          <div className="number" style={numberStyle}>
-            {props.length}
-          </div>
-        )}
+      <div style={barStyle}>
+        {width >= 25 && <div style={numberStyle}>{length}</div>}
       </div>
     </>
   );

@@ -1,12 +1,14 @@
-import "./navbar.css";
+import { useNavigate } from "react-router-dom";
 import RangeSlider from "../RangeSlider/RangeSlider";
 import SelectAlgorithm from "../SelectAlgorithm/SelectAlgorithm";
 
 function VerticalBar() {
-  return <div className="verticalBar"></div>;
+  return <div className="w-1 h-20 bg-slate-400"></div>;
 }
 
 function Navbar(props) {
+  const navigate = useNavigate();
+
   // generates a new random array
   const generateNewArrayHandler = () => {
     props.generateNewArray();
@@ -28,13 +30,19 @@ function Navbar(props) {
   };
 
   return (
-    <div className="navbar">
-      <div className="navbar__title">
-        <h1>BIMSQ Sorting Visualizer</h1>
+    <div className="bg-slate-900 text-white min-w-full flex flex-col items-center justify-center">
+      <div>
+        <button
+          className="absolute left-8 top-8 p-2 text-slate-200 rounded-xl bg-indigo-800 hover:bg-indigo-700"
+          onClick={() => navigate("/", { replace: true })}
+        >
+          ⬅️Back
+        </button>
+        <h1 className="text-3xl font-bold py-5">BIMSQ Sorting Visualizer</h1>
       </div>
 
-      <div className="navbar__toolbar">
-        <div className="navbar__toolbar-slider">
+      <div className="flex flex-row items-center justify-between p-4 gap-4 md:gap-8">
+        <div>
           <RangeSlider
             onChange={handleArraySizeAndSpeedChange}
             value={props.arraySize}
@@ -45,8 +53,11 @@ function Navbar(props) {
           <VerticalBar />
         </div>
 
-        <div className="navbar__toolbar-newarray">
-          <button className="Algobutton" onClick={generateNewArrayHandler}>
+        <div>
+          <button
+            className="p-1 w-24 md:w-40 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600"
+            onClick={generateNewArrayHandler}
+          >
             Generate Array
           </button>
         </div>
@@ -55,7 +66,7 @@ function Navbar(props) {
           <VerticalBar />
         </div>
 
-        <div className="navbar__toolbar-algorithms">
+        <div>
           <SelectAlgorithm onChange={handleSortingAlgorithmChange} />
         </div>
 
@@ -63,8 +74,11 @@ function Navbar(props) {
           <VerticalBar />
         </div>
 
-        <div className="navbar__toolbar-sort">
-          <button className="Algobutton" onClick={sortArrayHandler}>
+        <div>
+          <button
+            className="p-1 w-20 md:w-28 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600"
+            onClick={sortArrayHandler}
+          >
             Sort!
           </button>
         </div>

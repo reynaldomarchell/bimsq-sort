@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/ui/Navbar/Navbar";
 import Bar from "../components/ui/Bar/Bar";
 
-import "./Product.css";
-
 // Algorithms
 import {
   MergeSort,
@@ -142,7 +140,7 @@ function Productpage() {
       }, delay * (i + 1));
       timeoutsArray.push(timeout);
     }
-    console.log(`setting tiemeout`);
+    console.log(`setting timeout`);
     setTimeouts(timeoutsArray);
   };
 
@@ -182,7 +180,7 @@ function Productpage() {
   }, [algorithm]);
 
   return (
-    <div className="App">
+    <div className="flex flex-col items-center font-inter min-w-min min-h-screen justify-between bg-slate-800">
       <Navbar
         handleArraySizeAndSpeedChange={handleArraySizeAndSpeedChange}
         arraySize={arraySize}
@@ -190,10 +188,14 @@ function Productpage() {
         setAlgorithm={setAlgorithm}
         startSorting={startSorting}
       />
-      <div className="container">
-        <div className="array-display">{bars}</div>
+      <div className="flex flex-row max-w-2xl justify-center items-center">
+        <div className="flex flex-row justify-evenly w-3/4 rotate-180 h-3/4 mr-24">
+          {bars}
+        </div>
         {isSortingFinished && (
-          <p>Sorting time: {(sortingTime / 1000).toFixed(2)}s</p>
+          <p className="text-white text-xl">
+            Sorting time: {(sortingTime / 1000).toFixed(2)}s
+          </p>
         )}
       </div>
     </div>

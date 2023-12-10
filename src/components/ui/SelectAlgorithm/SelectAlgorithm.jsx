@@ -1,20 +1,11 @@
-import "./selectalgorithm.css";
-
 function SelectAlgorithm({ onChange }) {
-  // const [algorithm, setAlgorithm] = React.useState("")
-
-  // const handleChange = event => {
-  //     let v = event.target.value
-  //     setAlgorithm(v)
-  // }
-
   return (
-    <div>
-      <h4>Select Algorithm</h4>
+    <div className="flex flex-col content-center items-center">
+      <h4 className="m-0 mb-2">Select Algorithm</h4>
       <select
         name="algorithms"
         id="algorithms"
-        className="select-algorithms"
+        className="text-center font-bold h-fit w-28 md:w-40 p-1 mb-2 bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600"
         onChange={onChange}
       >
         <option value="">--Click here--</option>

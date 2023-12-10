@@ -1,24 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* CSS Variables */
-:root {
-  --darkSystemGray: rgb(28, 28, 30);
-  --lightSystemBlue: rgb(0, 122, 255);
-  --darkSystemBlue: rgb(10, 132, 255);
-  --lightSystemGreen: rgb(52, 199, 89);
-  --darkSystemGreen: rgb(48, 209, 88);
-}
-
-body {
-  margin: 0;
-  font-family: "inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
