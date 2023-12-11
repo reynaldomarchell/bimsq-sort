@@ -14,8 +14,9 @@ BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection 
 
 Stack used in this app
 
-- React
+- React JS
 - Vite
+- Tailwind CSS
 
 ## Installation
 
