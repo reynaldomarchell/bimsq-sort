@@ -1,4 +1,4 @@
-import myImg from "../../../images/hero.jpg";
+import myImg from "../../../../public/images/hero.jpg";
 import SectionTitle from "./SectionTitle";
 
 function About() {
