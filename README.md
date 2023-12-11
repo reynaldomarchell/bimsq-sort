@@ -23,7 +23,7 @@ Stack used in this app
 1. Clone this repository
 
 ```bash
-  git https://github.com/reynaldomarchell/bimsq-sort.git
+  git clone https://github.com/reynaldomarchell/bimsq-sort.git
 ```
 
 2.  Go to the project directory
