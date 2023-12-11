@@ -6,8 +6,8 @@ function PeopleItem({ name, imgUrl, role, instagram, quotes }) {
       rel="noreferrer"
       className="bg-slate-300 dark:bg-slate-800 flex rounded-lg overflow-hidden hover:bg-slate-100 dark:hover:bg-slate-600 hover:-translate-y-2 transform transition"
     >
-      <img src={imgUrl} alt={name} className="w-2/4 h-36 md:h-48" />
-      <div className="w-5/6 p-5 text-gray-600 dark:text-gray-300 ">
+      <img src={imgUrl} alt={name} className="w-2/4 h-full overflow-hidden" />
+      <div className="w-5/6 p-5 text-gray-600 dark:text-gray-300 flex flex-col justify-center">
         <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold">
           {name}
         </h3>
