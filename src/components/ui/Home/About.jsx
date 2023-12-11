@@ -1,4 +1,3 @@
-import myImg from "../../../../public/images/hero.jpg";
 import SectionTitle from "./SectionTitle";
 
 function About() {
@@ -16,7 +15,7 @@ function About() {
       </div>
 
       <img
-        src={myImg}
+        src={"/images/hero.jpg"}
         alt="About This Project"
         className="w-full md:w-6/12 rounded-lg object-cover"
       />

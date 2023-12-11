@@ -3,7 +3,7 @@ export default [
 		name: 'Reynaldo Marchell Bagas Adji',
 		quotes: '“Life is not a game of luck. If you wanna win, work hard.”',
 		imgUrl:
-			'../../../../public/images/aldo.jpg',
+			'/images/aldo.jpg',
 		role: "Developer",
 		instagram: 'https://www.instagram.com/reynaldo_marchellba/',
 	},
@@ -11,7 +11,7 @@ export default [
 		name: "Ihsaan Hardyanto",
 		quotes: '“if you cannot do great things,  do small things in a great way.”',
 		imgUrl:
-			'../../../../public/images/ihsaan.jpg',
+			'/images/ihsaan.jpg',
 		role: "Developer",
 		instagram: 'https://www.instagram.com/54.hnn/',
 	},
@@ -19,7 +19,7 @@ export default [
 		name: "Sessario Ammar Wibowo",
 		quotes: '“Life is hard but definitely could get harder. Start coding today.”',
 		imgUrl:
-			'../../../../public/images/sessario.jpg',
+			'/images/sessario.jpg',
 		role: "Researcher",
 		instagram: 'https://www.instagram.com/sessario07/',
 	},
@@ -27,7 +27,7 @@ export default [
 		name: 'William Prasetyo',
 		quotes: '“Every journey begins with a single step. We just have to have patience.”',
 		imgUrl:
-			'../../../../public/images/william.jpg',
+			'/images/william.jpg',
 		role: "UI/UX Designer",
 		instagram: 'https://www.instagram.com/williamprasetyo_25/',
 	},
@@ -35,7 +35,7 @@ export default [
 		name: 'Richard Yohanes',
 		quotes: '“Great things never come from comfort zones.”',
 		imgUrl:
-			'../../../../public/images/richard.jpg',
+			'/images/richard.jpg',
 		role: "UI/UX Designer",
 		instagram: 'https://www.instagram.com/richard_yohaes/',
 	},
