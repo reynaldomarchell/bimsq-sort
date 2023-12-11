@@ -8,7 +8,7 @@ export default [
 		instagram: 'https://www.instagram.com/reynaldo_marchellba/',
 	},
 	{
-		name: "Ihsaan Hardiyanto",
+		name: "Ihsaan Hardyanto",
 		quotes: '“if you cannot do great things,  do small things in a great way.”',
 		imgUrl:
 			'../../../../public/images/ihsaan.jpg',
