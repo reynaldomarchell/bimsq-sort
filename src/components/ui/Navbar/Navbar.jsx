@@ -6,27 +6,33 @@ function VerticalBar() {
   return <div className="w-1 h-20 bg-slate-400"></div>;
 }
 
-function Navbar(props) {
+function Navbar({
+  arraySize,
+  handleArraySizeAndSpeedChange,
+  generateNewArray,
+  startSorting,
+  setAlgorithm,
+}) {
   const navigate = useNavigate();
 
   // generates a new random array
   const generateNewArrayHandler = () => {
-    props.generateNewArray();
+    generateNewArray();
   };
 
   // lets the user change size of array and speed of sorting
-  const handleArraySizeAndSpeedChange = (event) => {
-    props.handleArraySizeAndSpeedChange(event.target.value);
+  const handleSizeAndSpeedChange = (event) => {
+    handleArraySizeAndSpeedChange(event.target.value);
   };
 
   // handle changing of algorithm
   const handleSortingAlgorithmChange = (event) => {
-    props.setAlgorithm(event.target.value);
+    setAlgorithm(event.target.value);
   };
 
   // starts playing the sorting algorithm
   const sortArrayHandler = () => {
-    props.startSorting();
+    startSorting();
   };
 
   return (
@@ -43,10 +49,7 @@ function Navbar(props) {
 
       <div className="flex flex-row items-center justify-between p-4 gap-4 md:gap-8">
         <div>
-          <RangeSlider
-            onChange={handleArraySizeAndSpeedChange}
-            value={props.arraySize}
-          />
+          <RangeSlider onChange={handleSizeAndSpeedChange} value={arraySize} />
         </div>
 
         <div>

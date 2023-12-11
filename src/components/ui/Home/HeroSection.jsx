@@ -4,7 +4,7 @@ function HeroSection() {
   const navigate = useNavigate();
 
   return (
-    <div id="hero" className="flex items-center justify-center flex-col py-20">
+    <div id="hero" className="flex items-center justify-center flex-col pt-20">
       <div className="text-center">
         <h1 className="text-2xl md:text-4xl mb-1 md:mb-3 text-indigo-600 dark:text-indigo-500 font-semibold">
           <a href="https://git.io/typing-svg">
