@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { IoChevronBack } from "react-icons/io5";
 import RangeSlider from "../RangeSlider/RangeSlider";
 import SelectAlgorithm from "../SelectAlgorithm/SelectAlgorithm";
 
@@ -39,10 +40,11 @@ function Navbar({
     <div className="bg-slate-900 text-white min-w-full flex flex-col items-center justify-center">
       <div>
         <button
-          className="absolute left-8 top-8 p-2 text-slate-200 rounded-xl bg-indigo-800 hover:bg-indigo-700"
-          onClick={() => navigate("/", { replace: true })}
+          className="absolute left-8 top-8 px-2 py-1 text-slate-200 rounded-md bg-indigo-800 hover:bg-indigo-700 flex justify-between items-center transition-all duration-300 ease-in-out font-semibold"
+          onClick={() => navigate("/")}
         >
-          ⬅️Back
+          <IoChevronBack />
+          <p>Back</p>
         </button>
         <h1 className="text-3xl font-bold py-5">BIMSQ Sorting Visualizer</h1>
       </div>
@@ -58,7 +60,7 @@ function Navbar({
 
         <div>
           <button
-            className="p-1 w-24 md:w-40 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600"
+            className="p-1 w-24 md:w-40 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600 transition-all duration-300 ease-in-out"
             onClick={generateNewArrayHandler}
           >
             Generate Array
@@ -79,7 +81,7 @@ function Navbar({
 
         <div>
           <button
-            className="p-1 w-20 md:w-28 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600"
+            className="p-1 w-20 md:w-28 inline bg-slate-700 text-white border-4 border-solid border-indigo-800 rounded-xl text-base hover:bg-slate-600 transition-all duration-300 ease-in-out"
             onClick={sortArrayHandler}
           >
             Sort!

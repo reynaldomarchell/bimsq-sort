@@ -33,7 +33,7 @@ function Homepage() {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed z-10 right-2 top-2 bg-indigo-700 text-lg p-1 rounded-md hover:bg-indigo-600"
+        className="fixed z-10 right-2 top-2 bg-indigo-700 text-lg p-1 rounded-md hover:bg-indigo-600 transition-all duration-300 ease-in-out"
       >
         {theme === "dark" ? "🌙" : "🌞"}
       </button>
@@ -43,6 +43,14 @@ function Homepage() {
           <Explanations />
           <Peoples />
           <About />
+          <div className="w-full flex justify-center items-center pb-8">
+            <a
+              href="#hero"
+              className="text-white bg-indigo-800 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out text-xl font-semibold shadow-lg"
+            >
+              Let&apos;s get started! ✨
+            </a>
+          </div>
           <Footer />
         </div>
       </div>

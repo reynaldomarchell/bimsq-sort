@@ -188,14 +188,19 @@ function Productpage() {
         setAlgorithm={setAlgorithm}
         startSorting={startSorting}
       />
-      <div className="flex flex-row max-w-2xl justify-center items-center">
-        <div className="flex flex-row justify-evenly w-3/4 rotate-180 h-3/4 mr-24">
+      <div className="flex flex-row max-w-4xl justify-center items-center">
+        <div className="flex flex-row justify-evenly w-3/4 rotate-180 h-3/4 mr-4">
           {bars}
         </div>
         {isSortingFinished && (
-          <p className="text-white text-xl">
-            Sorting time: {(sortingTime / 1000).toFixed(2)}s
-          </p>
+          <div className="flex items-center justify-center text-white text-xl w-full h-full border rounded-md bg-slate-700 px-2 py-1 shadow-lg hover:bg-slate-600 transition-all duration-300 ease-in-out">
+            <p>
+              Sorting time:{" "}
+              <span className="text-orange-400">
+                {(sortingTime / 1000).toFixed(2)}s
+              </span>
+            </p>
+          </div>
         )}
       </div>
     </div>

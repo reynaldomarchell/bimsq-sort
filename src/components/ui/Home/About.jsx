@@ -15,7 +15,7 @@ function About() {
       </div>
 
       <img
-        src={"/images/hero.jpg"}
+        src="/images/preview.png"
         alt="About This Project"
         className="w-full md:w-6/12 rounded-lg object-cover"
       />

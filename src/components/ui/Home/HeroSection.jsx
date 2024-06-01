@@ -14,12 +14,12 @@ function HeroSection() {
           Selection Sort, and Quick Sort.
         </p>
         <button
-          className="inline-block px-8 py-3 mt-7 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-md "
+          className="inline-block px-8 py-3 mt-7 border border-transparent  rounded-md text-white bg-indigo-700 hover:bg-indigo-600 md:text-md transition-all duration-300 ease-in-out text-xl font-semibold shadow-lg"
           onClick={() => {
-            navigate("/product", { replace: true });
+            navigate("/product");
           }}
         >
-          See How it Works
+          See how it works 🚀
         </button>
       </div>
     </div>

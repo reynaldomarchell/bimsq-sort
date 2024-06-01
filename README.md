@@ -12,7 +12,11 @@
 
 BIMSQ is an abbreviation for Bubble Sort, Insertion Sort, Merge Sort, Selection Sort, and Quick Sort. This app will display a visualization of the five types of sorting above.
 
-Stack used in this app
+### Preview
+
+![Preview](/public/images/preview.png)
+
+### Stack used in this app
 
 - React JS
 - Vite
